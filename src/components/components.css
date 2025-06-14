@@ -1,0 +1,101 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center; 
+  min-height: 100vh;   
+  padding: 20px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  color: #333;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Header */
+.Header {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  user-select: none;
+  color: #222;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+/* Each box */
+.boxes {
+  background-color: white;
+  border: 2px solid #444;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: #141619; 
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.boxes:hover {
+  background-color: #e9ecef;
+}
+
+.winner-message {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease forwards;
+  user-select: none;
+}
+
+.reset-button {
+  display: block;
+  margin: 0 auto 40px;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #141619;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.reset-button:hover {
+  background-color: #141619;
+  box-shadow: 0 6px 12px rgba(0, 86, 179, 0.5);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
