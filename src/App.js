@@ -1,4 +1,4 @@
-import {Grid, handleClick} from "./components/components";
+import {Grid} from "./components/components";
 
 function App() {
   return (
